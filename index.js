@@ -14,4 +14,16 @@ client.once("ready",()=>{
     console.log("bot logged in!!!");
 });
 
+client.on("messageCreate",(message)=>{
+    if(message.author.bot) return;
+
+    if(message.content === "!hello"){
+        message.reply("hello {message.author.username}, welcome to mandip's server");
+    }
+
+    if(message.content === "!ping"){
+        message.reply("pong");
+    }
+});
+
 client.login(process.env.DISCORD_TOKEN);
