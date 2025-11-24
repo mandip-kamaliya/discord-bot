@@ -18,7 +18,7 @@ client.on("messageCreate",(message)=>{
     if(message.author.bot) return;
 
     if(message.content === "!hello"){
-        message.reply("hello {message.author.username}, welcome to mandip's server");
+        message.reply(`hello ${message.author.username}, welcome to mandip's server`);
     }
 
     if(message.content === "!ping"){
